@@ -13,7 +13,7 @@ const client = new Twilio(accountSid, authToken);
 const openai = new OpenAI();
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -55,6 +55,9 @@ app.post('/whatsapp', async (req: Request, res: Response) => {
 });
 
 // Iniciar o servidor
-app.listen('0.0.0.0', () => {
+const server = app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
+
+server.keepAliveTimeout = 120 * 1000;
+server.headersTimeout = 120 * 1000;
