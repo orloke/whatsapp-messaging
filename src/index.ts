@@ -19,6 +19,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/whatsapp', async (req: Request, res: Response) => {
   const incomingMessage = req.body.Body;
+  const senderNumber = req.body.From
+  console.log("🚀 ~ app.post ~ senderNumber:", senderNumber)
 
   try {
 
