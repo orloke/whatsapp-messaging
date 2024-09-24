@@ -42,7 +42,7 @@ app.post('/whatsapp', async (req: Request, res: Response) => {
       .create({
           body: chatGptReply.content,
           from: 'whatsapp:+14155238886',
-          to: 'whatsapp:+556581751036'
+          to: senderNumber
       })
 
       res.status(200).send(`Mensagem processada com sucesso`);
