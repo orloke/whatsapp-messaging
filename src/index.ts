@@ -55,6 +55,6 @@ app.post('/whatsapp', async (req: Request, res: Response) => {
 });
 
 // Iniciar o servidor
-app.listen(PORT, () => {
+app.listen('0.0.0.0', () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
