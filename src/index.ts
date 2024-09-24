@@ -13,7 +13,7 @@ const client = new Twilio(accountSid, authToken);
 const openai = new OpenAI();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
