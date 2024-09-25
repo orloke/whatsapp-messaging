@@ -41,7 +41,7 @@ app.post('/whatsapp', async (req: Request, res: Response) => {
       await client.messages
       .create({
           body: chatGptReply.content,
-          from: 'whatsapp:+14155238886',
+          from: 'whatsapp:+12087683413',
           to: senderNumber
       })
 
